@@ -1,0 +1,10 @@
+module.exports = {
+  username: "1600000", // tên đăng nhập MyBK
+  password: "password", // mật khẩu MyBK
+  semester: "_20191", // học kỳ 191
+  interval: 5, // thời gian nghỉ giữa hai lần kiểm tra (đơn vị: phút)
+  notify: true, // gửi thông báo local
+  useEmail: true, // gửi email thông báo khi có điểm
+  email: "example@gmail.com", // email
+  emailPassword: "emailpassword" // mật khẩu email
+};

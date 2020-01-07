@@ -1,0 +1,47 @@
+{
+  "CO4027": {
+    "ma_mh": "CO4027",
+    "ten_mh": "Học máy",
+    "nhomto": "L02-A",
+    "diem_ktra": null,
+    "diem_thi": "15",
+    "diem_tong_ket": "15",
+    "diem_thanhphan": null
+  },
+  "CO4311": {
+    "ma_mh": "CO4311",
+    "ten_mh": "Đề cương luận văn tn",
+    "nhomto": "L01-C",
+    "diem_ktra": null,
+    "diem_thi": "DT",
+    "diem_tong_ket": "DT",
+    "diem_thanhphan": null
+  },
+  "CO3029": {
+    "ma_mh": "CO3029",
+    "ten_mh": "Khai phá dữ liệu",
+    "nhomto": "L01-B",
+    "diem_ktra": null,
+    "diem_thi": "15",
+    "diem_tong_ket": "15",
+    "diem_thanhphan": null
+  },
+  "CO3085": {
+    "ma_mh": "CO3085",
+    "ten_mh": "Xử lý ngôn ngữ tự nhiên",
+    "nhomto": "L01-A",
+    "diem_ktra": null,
+    "diem_thi": "15",
+    "diem_tong_ket": "15",
+    "diem_thanhphan": null
+  },
+  "CO3023": {
+    "ma_mh": "CO3023",
+    "ten_mh": "C/sở dữliệu phântán &hđt",
+    "nhomto": "L01-A",
+    "diem_ktra": null,
+    "diem_thi": "15",
+    "diem_tong_ket": "15",
+    "diem_thanhphan": null
+  }
+}
