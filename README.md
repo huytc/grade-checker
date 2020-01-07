@@ -14,7 +14,9 @@
 
 <!-- /code_chunk_output -->
 
-Công cụ này kiểm tra điểm một cách  trên MyBK, và gửi thông báo khi có điểm mới (bằng Notification của hệ điều hành hoặc thông qua Gmail).
+Công cụ này kiểm tra điểm một cách định kỳ trên MyBK, và gửi thông báo khi có điểm mới (bằng Notification của hệ điều hành hoặc thông qua Gmail).
+
+![grade-checker](grade-checker.png)
 
 ## Yêu cầu
 
