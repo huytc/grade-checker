@@ -136,6 +136,7 @@ const checkGrades = async () => {
   } catch (e) {
     console.log("Error:", e.message);
     setTimeout(checkGrades, interval * 1000 * 60);
+    page.close();
   }
 }
 
