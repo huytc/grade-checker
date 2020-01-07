@@ -67,9 +67,10 @@ const handleResponse = async response => {
       }
 
       if (currentGrades === null) {
+        currentGrades = latestGrades;
         console.log("Current grades:")
-        console.table(latestGrades);
-        fs.writeFileSync(GRADES_FILE, JSON.stringify(latestGrades, null, 2));
+        console.table(currentGrades);
+        fs.writeFileSync(GRADES_FILE, JSON.stringify(currentGrades, null, 2));
       } else {
         const updatedSubjects = updateGrades(currentGrades, latestGrades);
         if (updatedSubjects.length > 0) {
