@@ -114,10 +114,10 @@ const handleResponse = async response => {
       }
     } catch (e) {
       console.log("Error:", e.message);
+    } finally {
+      setTimeout(checkGrades, interval * 1000 * 60);
+      page.close();
     }
-
-    setTimeout(checkGrades, interval * 1000 * 60);
-    page.close();
   }
 };
 
