@@ -12,6 +12,8 @@ const GRADES_FILE = "grades.json";
 const { username, password, semester, interval,
   notify, useEmail, email, emailPassword } = require("./config");
 
+const _interval = Math.max(0.5, interval);
+
 let browser = null;
 let page = null;
 
@@ -51,6 +53,11 @@ const updateGrades = (currentGrades, latestGrades) => {
     }
   }
   return updatedSubjects;
+}
+
+const setTimeoutAndClose = () => {
+  setTimeout(checkGrades, _interval * 1000 * 60);
+  page.close();
 }
 
 const handleResponse = async response => {
@@ -115,8 +122,7 @@ const handleResponse = async response => {
     } catch (e) {
       console.log("Error:", e.message);
     } finally {
-      setTimeout(checkGrades, interval * 1000 * 60);
-      page.close();
+      setTimeoutAndClose();
     }
   }
 };
@@ -134,10 +140,16 @@ const checkGrades = async () => {
     await page.evaluate(() => {
       document.querySelector("a[data-link='grade']").click();
     });
+
+    // no result after 10s ==> restart
+    setTimeout(() => {
+      if (!page.isClosed()) {
+        setTimeoutAndClose();
+      }
+    }, 10000);
   } catch (e) {
     console.log("Error:", e.message);
-    setTimeout(checkGrades, interval * 1000 * 60);
-    page.close();
+    setTimeoutAndClose();
   }
 }
 
