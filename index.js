@@ -12,6 +12,8 @@ const GRADES_FILE = "grades.json";
 const { username, password, semester, interval,
   notify, useEmail, email, emailPassword } = require("./config");
 
+if (interval < 0.5) interval = 0.5;
+
 let browser = null;
 let page = null;
 
@@ -114,9 +116,6 @@ const handleResponse = async response => {
       }
     } catch (e) {
       console.log("Error:", e.message);
-    } finally {
-      setTimeout(checkGrades, interval * 1000 * 60);
-      page.close();
     }
   }
 };
@@ -136,6 +135,7 @@ const checkGrades = async () => {
     });
   } catch (e) {
     console.log("Error:", e.message);
+  } finally {
     setTimeout(checkGrades, interval * 1000 * 60);
     page.close();
   }
