@@ -34,10 +34,10 @@ const login = async page => {
 };
 
 const processRawGrades = rawGrades => {
-  const processGrades = rawGrades.map(rawGrade => _.pick(rawGrade,
+  const processedGrades = rawGrades.map(rawGrade => _.pick(rawGrade,
     ["ma_mh", "ten_mh", "nhomto", "diem_ktra", "diem_thi", "diem_tong_ket", "diem_thanhphan"])
   );
-  return _.keyBy(processGrades, 'ma_mh');
+  return _.keyBy(processedGrades, 'ma_mh');
 }
 
 const updateGrades = (currentGrades, latestGrades) => {
