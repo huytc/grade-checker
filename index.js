@@ -121,11 +121,8 @@ const handleResponse = async response => {
       }
     } catch (e) {
       console.log("Error:", e.message);
-<<<<<<< HEAD
-=======
     } finally {
       setTimeoutAndClose();
->>>>>>> 41db9fc18cf2ea7cc32f9a1e56fff1f1bf69bf9f
     }
   }
 };
@@ -152,13 +149,7 @@ const checkGrades = async () => {
     }, 10000);
   } catch (e) {
     console.log("Error:", e.message);
-<<<<<<< HEAD
-  } finally {
-    setTimeout(checkGrades, interval * 1000 * 60);
-    page.close();
-=======
     setTimeoutAndClose();
->>>>>>> 41db9fc18cf2ea7cc32f9a1e56fff1f1bf69bf9f
   }
 }
 
