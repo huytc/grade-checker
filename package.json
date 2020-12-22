@@ -6,7 +6,7 @@
   "dependencies": {
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
-    "node-notifier": "^6.0.0",
+    "node-notifier": "^8.0.1",
     "nodemailer": "^6.4.2",
     "puppeteer": "^1.18.1"
   }
